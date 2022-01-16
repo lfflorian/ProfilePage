@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Strengths, User } from 'src/app/model/user';
 import { UserService } from '../../services/user.service';
 
@@ -11,6 +11,7 @@ import { UserService } from '../../services/user.service';
 export class UserComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private userService : UserService) { }
 
   userId : string;
@@ -29,5 +30,9 @@ export class UserComponent implements OnInit {
       this.novice = this.user.strengths.filter(f => f.proficiency == 'novice');
       this.noExperienceInterested = this.user.strengths.filter(f => f.proficiency == 'no-experience-interested');
     })
+  }
+
+  skillSelected(skill : Strengths) {
+    this.router.navigateByUrl(`profile/skill`)
   }
 }
