@@ -12,4 +12,5 @@ class Person {
 export class Strengths {
     name: string;
     proficiency: string;
+    recommendations: string;
 }
