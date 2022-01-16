@@ -9,7 +9,7 @@ class Person {
     pictureThumbnail: string;
 }
 
-class Strengths {
+export class Strengths {
     name: string;
     proficiency: string;
 }

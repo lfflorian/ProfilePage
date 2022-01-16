@@ -15,6 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToProfile() {
-    this.router.navigateByUrl(`profile/${this.User}`)
+    this.router.navigateByUrl(`profile/user/${this.User}`)
   }
 }
