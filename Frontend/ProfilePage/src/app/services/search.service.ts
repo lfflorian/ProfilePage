@@ -9,7 +9,7 @@ import { usersFromSearch } from '../model/usersFromSearch';
 })
 export class SearchService {
 
-  baseURL : string = "http://localhost:3000/api/search"
+  baseURL : string = "https://profile-page-backend.herokuapp.com/api/search"
 
   constructor(private httpClient:HttpClient) { }
 

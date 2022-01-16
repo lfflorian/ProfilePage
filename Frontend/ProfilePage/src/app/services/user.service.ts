@@ -8,7 +8,7 @@ import { User } from '../model/user';
 })
 export class UserService {
 
-  baseURL : string = "http://localhost:3000/api/user"
+  baseURL : string = "https://profile-page-backend.herokuapp.com/api/user"
 
   constructor(private httpClient:HttpClient) { }
 
