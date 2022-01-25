@@ -1,12 +1,12 @@
-<div *ngIf="user">
-    <div class="container">
+<container-element *ngIf="user">
+    <div class="user">
         <app-profile-image [imageSrc]="user.person.pictureThumbnail"></app-profile-image>
-        <h2>{{user.person.name}}</h2>
-        <h2>{{user.person.professionalHeadline}}</h2>
-        <h3>Skills and interests</h3>
+        <h2 class="user_title">{{user.person.name}}</h2>
+        <h2 class="user_title">{{user.person.professionalHeadline}}</h2>
+        <h3 class="user_description">Skills and interests</h3>
         <app-chip-container title="expert" [strengths]="expert"></app-chip-container>
         <app-chip-container title="proficient" [strengths]="proficient"></app-chip-container>
         <app-chip-container title="novice" [strengths]="novice"></app-chip-container>
         <app-chip-container title="no-experience-interested" [strengths]="noExperienceInterested"></app-chip-container>
     </div>
-</div>
+</container-element>

@@ -1,5 +1,5 @@
-<div class="container" (click)="goToProfile(user.username)">
+<div class="user_container" (click)="goToProfile(user.username)">
     <app-profile-image [imageSrc]="user.picture"></app-profile-image>
-    <h4>{{ user.name }}</h4>
-    <p>{{ user.professionalHeadline }}</p>
+    <h4 class="user_container_title">{{ user.name }}</h4>
+    <p class="user_container_description">{{ user.professionalHeadline }}</p>
 </div>

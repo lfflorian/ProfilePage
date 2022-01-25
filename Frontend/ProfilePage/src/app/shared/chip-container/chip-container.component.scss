@@ -1,9 +1,11 @@
-h4 {
-    color: #bbc846;
-    font-weight: 200;
-    margin: 5px;
-}
+.chip_container {
+    .chip_container_title {
+        color: #bbc846;
+        font-weight: 200;
+        margin: 5px;
+    }
 
-.skill-container {
-    width: 80%;
+    .chip_container_strengths {
+        width: 80%;
+    }
 }

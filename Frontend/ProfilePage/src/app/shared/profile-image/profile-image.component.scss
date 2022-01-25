@@ -1,16 +1,10 @@
-.logo-container {
-    margin-top: 30px;
-    position: relative;
-    height: 150px;
-}
-
-.hexagon-container {
+.hexagon {
     position: relative;
     width: 150px;
     height: 150px;
     padding-bottom: 16px;
 
-    .hexagon-border {
+    .hexagon_border {
         margin: auto;
         position: absolute;
         width: 100%;
@@ -21,7 +15,7 @@
         background-color: #5e626b;
     }
 
-    img {
+    .hexagon_img {
         top: 21px;
         left: 5px;
         position: absolute;
