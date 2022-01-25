@@ -29,8 +29,4 @@ export class SkillComponent implements OnInit {
       })
     })
   }
-
-  goToProfile(username: string) {
-    this.router.navigateByUrl(`profile/user/${username}`)
-  }
 }
