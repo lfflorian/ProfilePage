@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background-grey-color: #28292d;
+    --text-gray: #9a9ca1;
+    --green-color: #cddc39;
+    --white-color: white;
+}
+
 body {
-    background-color: #28292d;
+    background-color: var(--background-grey-color);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -2,35 +2,65 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-top: 100px;
 
     .home_title {
-        color: white;
+        color: var(--white-color);
     }
 
     .home_title_green {
-        color: #bbc846;
+        color: var(--green-color);
     }
 
     .home_input_text {
         padding: 12px 20px;
+        border-radius: 15px;
+        border-style: hidden;
+        background: var(--background-grey-color);
+        color: var(--white-color);
+        border: 1px solid var(--text-gray);
         font-size: 1rem;
-        border-width: calc(var(--border-width) * 1px);
-        border-style: solid;
-        border-color: var(--accent);
-        border-radius: calc(var(--border-radius) * 1px);
         text-align: center;
         outline: transparent;
-        transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+        transition: border-color 0.5s;
+
+        &::placeholder {
+            transition: color 0.5s;
+        }
+
+        &:hover {
+            border-color: var(--white-color);
+
+            &::placeholder {
+                color: var(--white-color);
+            }
+        }
+
+        &:focus {
+            border-color: var(--green-color);
+
+            &::placeholder {
+                color: var(--text-gray);
+            }
+        }
     }
 
     .home_button {
         display: block;
-        background-color: #bbc846;
+        background-color: var(--green-color);
         border: none;
-        color: white;
+        color: var(--white-color);
         padding: 16px 32px;
         text-decoration: none;
         margin: 10px auto;
         cursor: pointer;
+        border-radius: 15px;
+        font-weight: 700;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: var(--white-color);
+            color: var(--green-color);
+        }
     }
 }
