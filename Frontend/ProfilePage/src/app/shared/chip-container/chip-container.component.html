@@ -1,0 +1,6 @@
+<h4>{{ title }}</h4>
+<div class="skill-container">
+    <container-element *ngFor="let strength of strengths">
+        <app-chip [strength]="strength"></app-chip>
+    </container-element>
+</div>
