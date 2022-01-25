@@ -34,11 +34,5 @@ export class UserComponent implements OnInit {
       this.novice = this.user.strengths.filter(f => f.proficiency == 'novice');
       this.noExperienceInterested = this.user.strengths.filter(f => f.proficiency == 'no-experience-interested');
     })
-    
-  }
-
-  skillSelected(skill : Strengths) {
-    this.shareSkill.shareSkill(skill)
-    this.router.navigateByUrl(`profile/skill`)
   }
 }

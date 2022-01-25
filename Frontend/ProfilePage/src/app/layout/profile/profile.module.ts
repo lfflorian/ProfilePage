@@ -5,6 +5,7 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { UserComponent } from '../../profile/user/user.component';
 import { SkillComponent } from '../../profile/skill/skill.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SkillComponent } from '../../profile/skill/skill.component';
     SkillComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    SharedModule
   ]
 })
 export class ProfileModule { }
