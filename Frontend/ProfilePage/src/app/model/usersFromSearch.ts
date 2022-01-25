@@ -2,7 +2,7 @@ export class usersFromSearch {
     results: UserResult[];
 }
 
-class UserResult {
+export class UserResult {
     name: string;
     professionalHeadline: string;
     username: string;

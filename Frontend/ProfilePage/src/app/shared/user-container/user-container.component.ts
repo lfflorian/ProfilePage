@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { usersFromSearch } from 'src/app/model/usersFromSearch';
+import { UserResult } from 'src/app/model/usersFromSearch';
 
 @Component({
   selector: 'app-user-container',
@@ -9,7 +9,7 @@ import { usersFromSearch } from 'src/app/model/usersFromSearch';
 })
 export class UserContainerComponent implements OnInit {
 
-  @Input() user: usersFromSearch;
+  @Input() user: UserResult;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
