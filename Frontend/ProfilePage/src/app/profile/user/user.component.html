@@ -1,12 +1,19 @@
 <container-element *ngIf="user">
-    <div class="user">
-        <app-profile-image [imageSrc]="user.person.pictureThumbnail"></app-profile-image>
-        <h2 class="user_title">{{user.person.name}}</h2>
-        <h2 class="user_title">{{user.person.professionalHeadline}}</h2>
-        <h3 class="user_description">Skills and interests</h3>
-        <app-chip-container title="expert" [strengths]="expert"></app-chip-container>
-        <app-chip-container title="proficient" [strengths]="proficient"></app-chip-container>
-        <app-chip-container title="novice" [strengths]="novice"></app-chip-container>
-        <app-chip-container title="no-experience-interested" [strengths]="noExperienceInterested"></app-chip-container>
+    <div class="row center-xs center-sm">
+        <div class="col-xs-12 col-sm-9 col-md-6">
+            <div class="user">
+                <app-profile-image [imageSrc]="user.person.pictureThumbnail"></app-profile-image>
+                <div class="user_info_container">
+                    <h2 class="user_info_container_title">{{user.person.name}}</h2>
+                    <h2 class="user_info_container_title">{{user.person.professionalHeadline}}</h2>
+                    <h3 class="user_info_container_description">Skills and interests</h3>
+                </div>
+                <app-chip-container title="Expert" [strengths]="expert"></app-chip-container>
+                <app-chip-container title="Proficient" [strengths]="proficient"></app-chip-container>
+                <app-chip-container title="Novice" [strengths]="novice"></app-chip-container>
+                <app-chip-container title="No experience interested" [strengths]="noExperienceInterested">
+                </app-chip-container>
+            </div>
+        </div>
     </div>
 </container-element>
