@@ -1,6 +1,12 @@
-<container-element *ngIf="user">
-    <div class="row center-xs center-sm">
-        <div class="col-xs-12 col-sm-9 col-md-6">
+<div class="row center-xs center-sm">
+    <div class="col-xs-12">
+        <container-element *ngIf="showLoader">
+            <app-loader></app-loader>
+            <p class="loading_message">Loading profile, please wait!</p>
+        </container-element>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-6">
+        <container-element *ngIf="user">
             <div class="user">
                 <app-profile-image [imageSrc]="user.person.pictureThumbnail"></app-profile-image>
                 <div class="user_info_container">
@@ -11,9 +17,8 @@
                 <app-chip-container title="Expert" [strengths]="expert"></app-chip-container>
                 <app-chip-container title="Proficient" [strengths]="proficient"></app-chip-container>
                 <app-chip-container title="Novice" [strengths]="novice"></app-chip-container>
-                <app-chip-container title="No experience interested" [strengths]="noExperienceInterested">
-                </app-chip-container>
+                <app-chip-container title="No experience interested" [strengths]="noExperienceInterested"></app-chip-container>
             </div>
-        </div>
+        </container-element>
     </div>
-</container-element>
+</div>
