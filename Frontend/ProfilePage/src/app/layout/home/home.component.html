@@ -1,9 +1,20 @@
-<div class="row">
+<div class="row center-xs">
     <div class="col-xs-12">
         <div class="home">
-            <h1 class="home_title">Welcome to Profile Page! <span class="home_title_green">can please enter your profile ID?</span></h1>
-            <input class="home_input_text" type="text" [(ngModel)]="User" placeholder="Search profile"/>
+            <h1 class="home_title">Welcome to Profile Page! <span class="home_title_green">can please enter your profile
+                    ID?</span></h1>
+            <input class="home_input_text" type="text" [(ngModel)]="User" placeholder="Search profile" />
             <button class="home_button" (click)="goToProfile()">OK!</button>
         </div>
+    </div>
+    <div class="col-xs-12">
+        <container-element *ngIf="showLoader">
+            <app-loader></app-loader>
+        </container-element>
+    </div>
+    <div class="col-xs-3">
+        <container-element *ngIf="showMessage">
+            <app-message-box [message]="message"></app-message-box>
+        </container-element>
     </div>
 </div>
