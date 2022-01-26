@@ -1,13 +1,23 @@
 <container-element *ngIf="skill">
-    <div class="skill">
-        <h1 class="skill_title">{{ skill.name }}</h1>
-        <h3 class="skill_subtitle">Proficiency: {{ skill.proficiency }}</h3>
-        <h3 class="skill_subtitle">Recommendations: {{ skill.recommendations }}</h3>
-        <h3 class="skill_subtitle">Other people with this skill:</h3>
-        <container-element *ngIf="users">
-            <container-element *ngFor="let user of users.results">
-                <app-user-container [user]="user"></app-user-container>
-            </container-element>
-        </container-element>
+    <div class="row center-xs center-sm">
+        <div class="col-xs-12 col-sm-9 col-md-6">
+            <div class="skill">
+                <h1 class="skill_title">{{ skill.name }}</h1>
+                <h3 class="skill_subtitle">Proficiency: {{ skill.proficiency }}</h3>
+                <h3 class="skill_subtitle">Recommendations: {{ skill.recommendations }}</h3>
+                <h3 class="skill_subtitle">Other people with this skill:</h3>
+
+                <div class="row center-sm">
+                    <div class="col-xs-12 col-sm-10">
+                        <container-element *ngIf="users">
+                            <container-element *ngFor="let user of users.results">
+                                <app-user-container [user]="user"></app-user-container>
+                            </container-element>
+                        </container-element>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </container-element>
