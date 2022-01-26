@@ -23,7 +23,6 @@ export class SkillComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.shareSkill.currentSkill.subscribe(skill => {
-      console.log(skill)
       this.skill = (skill) ? skill : JSON.parse(localStorage.getItem('skill')) as Strengths;
       this.searchService.searchUsers(this.skill.name, this.skill.proficiency).subscribe(data => {
         this.users = data;

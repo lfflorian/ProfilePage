@@ -18,7 +18,6 @@ export class ChipComponent implements OnInit {
   }
 
   skillSelected(skill : Strengths) {
-    //localStorage.setItem('skill', skill);
     this.shareSkill.shareSkill(skill)
     this.router.navigateByUrl(`profile/skill`)
   }
