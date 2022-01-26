@@ -13,6 +13,7 @@ export class ShareSkillService {
   constructor() { }
 
   shareSkill(skill: Strengths) {
+    localStorage.setItem('skill', JSON.stringify(skill));
     this.messageSource.next(skill)
   }
 }
