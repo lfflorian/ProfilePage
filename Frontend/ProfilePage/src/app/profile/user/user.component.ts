@@ -14,8 +14,7 @@ export class UserComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private userService : UserService,
-              private shareSkill: ShareSkillService) { }
+              private userService : UserService) { }
 
   userId : string;
   user: User;
@@ -24,6 +23,7 @@ export class UserComponent implements OnInit {
   novice: Strengths[];
   noExperienceInterested: Strengths[];
   subscription: Subscription;
+  showLoader: boolean = true;
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.paramMap.get("id")
@@ -33,12 +33,10 @@ export class UserComponent implements OnInit {
       this.proficient = this.user.strengths.filter(f => f.proficiency == 'proficient');
       this.novice = this.user.strengths.filter(f => f.proficiency == 'novice');
       this.noExperienceInterested = this.user.strengths.filter(f => f.proficiency == 'no-experience-interested');
+      this.showLoader = false;
+    }, (error) => {
+      alert("user not found, please try again!")
+      this.router.navigateByUrl(`home`)
     })
-    
-  }
-
-  skillSelected(skill : Strengths) {
-    this.shareSkill.shareSkill(skill)
-    this.router.navigateByUrl(`profile/skill`)
   }
 }

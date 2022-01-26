@@ -1,0 +1,11 @@
+<container-element *ngIf="strengths.length > 0">
+    <div class="chip_container">
+        <h4 class="chip_container_title">{{ title }}</h4>
+        <div class="chip_container_strengths skill-container">
+            <container-element *ngFor="let strength of strengths">
+                <app-chip [strength]="strength"></app-chip>
+            </container-element>
+        </div>
+    </div>
+</container-element>
+

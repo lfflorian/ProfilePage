@@ -1,0 +1,31 @@
+.user_container {
+    border: 1px solid #999;
+    border-radius: 15px;
+    padding: 15px 15px;
+    margin: 15px 0;
+    box-shadow: 2px 2px 4px #999;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s ;
+
+    &:hover {
+        border-color: var(--green-color);
+        box-shadow: 2px 2px 4px var(--green-color);
+        background-color: #222;
+    }
+
+    .user_container_info {
+        margin: 25px 0;
+
+        .user_container_info_title {
+            color: #bbc846;
+            font-weight: 200;
+            margin: 5px;
+        }
+        
+        .user_container_info_description {
+            color: #9a9ca1;
+        }
+
+    }
+    
+}

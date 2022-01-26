@@ -1,0 +1,15 @@
+<div class="user_container" (click)="goToProfile(user.username)">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <app-profile-image [imageSrc]="user.picture"></app-profile-image>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <div class="user_container_info">
+                <div class="contain">
+                    <h4 class="user_container_info_title">{{ user.name }}</h4>
+                    <p class="user_container_info_description">{{ user.professionalHeadline }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
